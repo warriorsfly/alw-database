@@ -6,8 +6,15 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-alw-error = { version = "0.1.0",path = "../alw-error"}
-axum = "0.6"
-diesel = {version = "2",  default-features = false, features = ["chrono", "postgres","serde_json"]}
-diesel-async = {version = "0.2", default-features = false, features = ["bb8","postgres"]}
+alw-core = { version = "0.1.0", path = "../alw-core" }
+axum = "0.7"
+diesel = { version = "2", features = [
+    "chrono",
+    "postgres",
+    "serde_json",
+] }
+diesel-async = { version = "0.4", features = [
+    "bb8",
+    "postgres",
+] }
 futures = "0.3"
